@@ -33,8 +33,7 @@ cd udav_project
 
 #Create App Jar
 mvnd -f mp/pom.xml clean package -Pzznote
-ls zznote/target
-sleep 5
+
 #Unpack run script r.sh
 java -jar zznote/target/app.jar --init
 
