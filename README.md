@@ -13,7 +13,7 @@
 Приложение имеет встроенный rest-server для получения данных via http
 
 
-## RUN
+## RUN APPLICATION
 
 ```commandline
 #GetRepo + import project in Idea
@@ -25,12 +25,16 @@ ZznApplication.Run_LOCAL.main()
 ```
 OR
 ```bash
+rm -rf udav_project
 #GetRepo
 git clone git@github.com:mostali/udav_project.git
 
+cd udav_project
+
 #Create App Jar
 mvnd -f mp/pom.xml clean package -Pzznote
-
+ls zznote/target
+sleep 5
 #Unpack run script r.sh
 java -jar zznote/target/app.jar --init
 
