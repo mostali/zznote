@@ -41,9 +41,9 @@ java -jar zznote/target/app.jar --init
 mv zznote/target/app.jar .
 
 #Run application on our Java Or Skip It and Run in docker
-#./r.sh --p
+./r.sh --p
 
 #mv zznote/Dockerfile-Rocky .
-sudo docker build -t cr-image:1 -f Dockerfile-Rocky . && sudo docker run  cr-image:1
+#sudo docker build -t cr-image:1 -f Dockerfile-Rocky . && sudo docker run  cr-image:1
 ```
 
