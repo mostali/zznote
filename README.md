@@ -12,6 +12,7 @@
 
 Приложение имеет встроенный rest-server для получения данных via http
 
+Запускается как модуль проекта https://github.com/mostali/udav_project
 
 ## RUN APPLICATION
 
