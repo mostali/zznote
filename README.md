@@ -1,2 +1,6 @@
-# zznote
-Zznote Web Constructor - Java Framework
+## Zznote Web Constructor - Java Framework 
+
+Run
+```
+ZznApplication.Run_LOCAL.main()
+```
