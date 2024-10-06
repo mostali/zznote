@@ -18,8 +18,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter;
 import org.springframework.stereotype.Component;
 import utl_spring.AppContext;
-import zk_os.AppZosFilter;
 import zk_os.AppZosConfig;
+import zk_os.AppZosFilter;
 import zk_os.db.WebUsrService;
 import zk_os.sec.ROLE;
 import zk_os.sec.Sec;
@@ -37,20 +37,6 @@ import zk_page.core.PageSP;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final Logger L = LoggerFactory.getLogger(WebSecurityConfig.class);
 
-
-//	@Bean
-//	@Override
-//	public UserDetailsService userDetailsService() {
-//		UserDetails user =
-//				User.withDefaultPasswordEncoder()
-//						.username("login")
-//						.password("pass")
-//						.roles(ROLE_ADMIN)
-//						.build();
-//
-//		return new InMemoryUserDetailsManager(user);
-//	}
-
 	public static final String ZUL_FILES_DENY = "/zkau/web/**/*.zul";
 
 	//	http://q.com:8080/zkau/web/b145fca4/ckez/html/browse.zul?Type=Images&dtid=z_0-EsmczFu2d-7TYbGhgwAA&uuid=nLOO3&CKEditor=nLOO3-cnt&CKEditorFuncNum=3&langCode=ru
@@ -63,10 +49,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	// allow desktop cleanup after logout or when reloading login page
 	public static final String REMOVE_DESKTOP_REGEX = "/zkau\\?dtid=.*&cmd_0=rmDesktop&.*";
 
-	//	@Override
-//	public void configure(WebSecurity web) throws Exception {
-//		web.ignoring().antMatchers("/**");
-//	}
 	@Autowired
 	AppZosFilter appFilter;
 	@Autowired
@@ -145,56 +127,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		}
 	}
 
-//	@Bean
-//	public PasswordEncoder passwordEncoder() {
-//		return new BCryptPasswordEncoder(10);
-//	}
-
 	@Bean
 	public UserDetailsService userDetailsService() {
-//		return new MyUserDetailsService();
 		return new WebUsrService();
 	}
-
-	//	https://stackoverflow.com/questions/52143913/authentication-using-cookies-in-spring-boot
-//	@EnableWebSecurity
-//	@Configuration
-//	public class SecurityConfig extends WebSecurityConfigurerAdapter {
-//
-//		@Bean
-//		public PasswordEncoder passwordEncoder() {
-//			return new BCryptPasswordEncoder(10);
-//		}
-//
-//		@Bean
-//		public UserDetailsService userDetailsService() {
-//			return new MyUserDetailsService();
-//		}
-//	}
-//
-//	public class MyUserDetailsService implements UserDetailsService {
-//		@Override
-//		public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//			if ("admin".equalsIgnoreCase(username) || "bear".equalsIgnoreCase(username)) {
-//				return User.builder()
-//						.username(username)
-//						// This should contain the hashed password for the requested user
-//						.password("$2a$10$T5viXrOTIkraRe2mZPyZH.MAqKaR6x38L.rbmRp53yQ8R/cFrJkda")
-//						// If you don't need roles, just provide a default one, eg. "USER"
-//						.roles("USER", "ADMIN")
-////						.authorities(ROLE.GA_ROLE_USER, ROLE.GA_ROLE_ADMIN)
-//						.build();
-//			} else {
-//				// Throw this exception if the user was not found
-//				throw new UsernameNotFoundException("User not found");
-//			}
-//		}
-//	}
-
-//	@Bean
-//	@Qualifier("uidmUserPreAuthenticationFilter")
-//	public Filter uidmUserPreAuthenticationFilter() {
-//		return new BeaAuthFilter();
-//	}
 
 }
