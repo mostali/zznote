@@ -5,13 +5,19 @@
 Java-Приложение для создания, хранения и отображения информации/заметок и создания простых вэб-страниц
 
 
-Для входа на сайт требуется аутентификация
+Для создания заметок требуется аутентификация
 
 Используйте бота в ВК, или в ТГ для получения токена
 
 Для аутентификации отправь '+' боту. Далее, полученый токен используется для атворизации на страницах сайта
 
 Приложение имеет встроенный rest-server для получения данных via http
+```commandline
+#create note (GET,POST)
+http://q.com:8080/page/!/note?v=123
+#GET
+http://q.com:8080/page/*/note
+```
 
 Запускается как модуль проекта https://github.com/mostali/udav_project
 
@@ -41,6 +47,7 @@ ZznApplication.Run_LOCAL.main()
 #### Run App as java instance (+Docker Way)
 
 ```bash
+cd ~
 rm -rf udav_project
 #GetRepo
 git clone git@github.com:mostali/udav_project.git
