@@ -14,8 +14,30 @@
 
 
 ## RUN
-```commandline
-git clone git@github.com:mostali/zznote.git
 
+```commandline
+#GetRepo + import project in Idea
+git clone git@github.com:mostali/udav_project.git
+
+...
+//Run From Idea Project
 ZznApplication.Run_LOCAL.main()
 ```
+OR
+```bash
+#GetRepo
+git clone git@github.com:mostali/udav_project.git
+
+#Create App Jar
+mvnd -f mp/pom.xml clean package -Pzznote
+
+#Unpack run script r.sh
+java -jar zznote/target/app.jar --init
+
+#mv app.jar
+mv zznote/target/app.jar .
+
+#Run application
+./r.sh --p
+```
+
