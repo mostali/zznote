@@ -1,0 +1,41 @@
+<!--<zk>-->
+<!--	<window viewModel="@id('vm') @init('zkbea.vm.appvm.AppVM')">-->
+<!--		&lt;!&ndash;		title="${labels.mvvm.title}"&ndash;&gt;-->
+<!--		&lt;!&ndash;		Start (from Spring Service):&ndash;&gt;-->
+
+<!--		&lt;!&ndash;		<hlayout valign="middle">&ndash;&gt;-->
+<!--		&lt;!&ndash;			<label value="@load(vm.currentTime)"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;			<button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		</hlayout>&ndash;&gt;-->
+
+<!--		&lt;!&ndash;		<textbox value="@load(vm.systemQuery)" hflex="1" rows="4" readonly="true"/>&ndash;&gt;-->
+
+<!--		<separator/>-->
+
+<!--		&lt;!&ndash;		Test Simple MVVM-Based Sub Navigation:&ndash;&gt;-->
+<!--		&lt;!&ndash;		<div>&ndash;&gt;-->
+<!--		&lt;!&ndash;			<button label="sub page 1" onClick="@command('navigate', page='page1')"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;			<button label="sub page 2" onClick="@command('navigate', page='page2')"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--		&lt;!&ndash;		Test&ndash;&gt;-->
+<!--		&lt;!&ndash;		<div>&ndash;&gt;-->
+<!--		&lt;!&ndash;			<button label="test" onClick="@command('onFScreen', page='page1')"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--		&lt;!&ndash;		<div>&ndash;&gt;-->
+<!--		&lt;!&ndash;			<button label="test2" onClick="@command('test2', page='page1')"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--		&lt;!&ndash; in ZK CE version you can use the include component &ndash;&gt;-->
+<!--		&lt;!&ndash;<include pageModel="@load(vm.currentPage)" src="@load(vm.currentPage.uri)"/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		<apply templateURI="@load(vm.currentPage.uri)" pageModel="@load(vm.currentPage)"/>&ndash;&gt;-->
+
+<!--		&lt;!&ndash;		<div style="height:500px">&ndash;&gt;-->
+<!--		&lt;!&ndash;			<spreadsheet showAddRow="false" showAddColumn="true" hflex="1" vflex="1"&ndash;&gt;-->
+<!--		&lt;!&ndash;						 showToolbar="false" showContextMenu="false" showSheetbar="false"&ndash;&gt;-->
+<!--		&lt;!&ndash;						 onSheetSelect="@command('onSheetSelect')"&ndash;&gt;-->
+<!--		&lt;!&ndash;						 onCellRightClick="@command('onCellRightClick')"&ndash;&gt;-->
+<!--		&lt;!&ndash;						 onCellDoubleClick="@command('onCellDoubleClick')"&ndash;&gt;-->
+<!--		&lt;!&ndash;						 onStopEditing="@command('onStopEditing')"&ndash;&gt;-->
+<!--		&lt;!&ndash;			/>&ndash;&gt;-->
+<!--		&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--	</window>-->
+<!--</zk>-->

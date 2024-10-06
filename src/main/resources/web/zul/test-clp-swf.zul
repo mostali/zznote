@@ -1,0 +1,38 @@
+<zk>
+
+<window id="info" apply="controller.indexController">
+       <script src="jquery-1.6.4.js" type="text/javascript" />
+       <script type="text/javascript" src="ZeroClipboard.js"/>
+
+        <div id="d_clip_container">
+            <image src="/Clipboard.png" />
+        </div>
+
+        <textbox id= "txtClipText"   cols="50" readonly="true" value="Some string for the clipboard"/>
+
+        <script>
+        var clip = null;
+
+        function $(id) { return document.getElementById(id); }
+
+                function init(divId,clipText) {
+                    ZeroClipboard.setMoviePath("ZeroClipboard.swf");
+                    var clip = new ZeroClipboard.Client();
+
+                    clip.addEventListener('mouseOver', function (client) {
+                        clip.setText(zk.Widget.$(jq("$txtClipText")).getValue() );
+                        //clip.setText(clipText);
+                    });
+
+                    clip.addEventListener('complete', function (client, text) {
+                        alert("Copied text to clipboard: \n\n" + text );
+                    });
+
+                    clip.glue(divId);
+        }
+        </script>
+        <textbox value="" cols="30"/>
+    </window>
+
+
+</zk>

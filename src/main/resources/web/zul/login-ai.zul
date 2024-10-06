@@ -1,0 +1,38 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?script type="text/javascript" src="/full-js.dsp"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+	<style>
+		.error {
+		color: red;
+		}
+		body{
+		background-color: #f0f2f5;
+		background-image: url(_img/bg_sec.png);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 95%;
+		position: relative;
+		}
+	</style>
+	<window mode="overlapped" position="center,center" title="Авторизация" border="normal" width="230px"
+			viewModel="@id('vm') @init('ru.otr.ai.viewmodel.LoginVM')">
+		<vlayout>
+			<label value="Логин"/>
+			<textbox hflex="1" name="j_username" id="login" value="@bind(vm.login)"/>
+			<label value="Пароль"/>
+			<textbox hflex="1" name="j_password" id="pass" type="password" value="@bind(vm.password)"
+					 forward="onOK=submt.onClick"/>
+            <label value="Уровень секретности"/>
+            <combobox id="securityCombobox" hflex="1"/>
+            <label value="@load(vm.errorMessage)" visible="@load(!vm.errorMessage.isEmpty())" sclass="error"/>
+            <hlayout hflex="1" valign="middle">
+                <space hflex="1"/>
+                <button id="submt" onClick="@command('login')" autodisable="self" label="Войти"/>
+                <button type="reset" label="Отмена"/>
+                <space hflex="1"/>
+            </hlayout>
+		</vlayout>
+	</window>
+</zk>

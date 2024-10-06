@@ -1,0 +1,35 @@
+<zk>
+	<window title="${labels.mvvm.title}" viewModel="@id('vm') @init('zkbea.demo.viewmodel.TestVM')">
+		Start (from Spring Service):
+
+		<hlayout valign="middle">
+			<label value="@load(vm.currentTime)"/>
+			<button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>
+		</hlayout>
+
+		<separator/>
+
+		Test Simple MVVM-Based Sub Navigation:
+		<div>
+			<button label="sub page 1" onClick="@command('navigate', page='page1')"/>
+			<button label="sub page 2" onClick="@command('navigate', page='page2')"/>
+		</div>
+		Test
+		<div>
+			<button label="test" onClick="@command('onFScreen', page='page1')"/>
+		</div>
+		<!-- in ZK CE version you can use the include component -->
+		<!--<include pageModel="@load(vm.currentPage)" src="@load(vm.currentPage.uri)"/>-->
+		<apply templateURI="@load(vm.currentPage.uri)" pageModel="@load(vm.currentPage)"/>
+
+		<div style="height:500px">
+			<spreadsheet showAddRow="false" showAddColumn="true" hflex="1" vflex="1"
+						 showToolbar="false" showContextMenu="false" showSheetbar="false"
+						 onSheetSelect="@command('onSheetSelect')"
+						 onCellRightClick="@command('onCellRightClick')"
+						 onCellDoubleClick="@command('onCellDoubleClick')"
+						 onStopEditing="@command('onStopEditing')"
+			/>
+		</div>
+	</window>
+</zk>

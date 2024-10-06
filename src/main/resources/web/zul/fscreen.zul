@@ -1,0 +1,8 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://keikai.io/2019/zul/zul.xsd">
+	<window id="ssFullScreenWindow" position="center, center" closable="true"
+			onClose="@command('close')" border="normal" height="100%" width="100%"
+			viewModel="@id('vm') @init('org.zkoss.zkspringboot.demo.viewmodel.SsFullScreenVM')" mode="modal">
+	</window>
+</zk>

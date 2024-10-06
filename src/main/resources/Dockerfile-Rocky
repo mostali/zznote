@@ -1,0 +1,32 @@
+
+## Custom Dockerfile
+FROM consol/rocky-xfce-vnc
+#FROM consol/centos-xfce-vnc
+ENV REFRESHED_AT 2018-03-18
+
+# Switch to root user to install additional software
+USER 0
+
+RUN yum install -y java-11
+RUN yum install -y nano
+RUN yum install -y gedit
+
+yum clean all
+
+RUN useradd -m -s /bin/bash lu
+RUN usermod --password lu lu
+#RUN usermod -aG sudo lu
+
+#USER lu
+COPY --chown=lu:lu app.jar /home/lu/app/app.jar
+
+
+RUN #echo "java -jar /home/lu/app/app.jar" > /home/lu/app/app.sh
+RUN echo "cd /home/lu/app/ && java -jar /home/lu/app/app.jar" > /headless/Desktop/app.sh
+RUN chmod 777 /headless/Desktop/app.sh
+RUN chown 777 /headless/Desktop/app.sh
+RUN chgrp 777 /headless/Desktop/app.sh
+#RUN /home/lu/app/app.sh
+
+## switch back to default user
+USER 1000
