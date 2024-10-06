@@ -23,7 +23,7 @@ git clone git@github.com:mostali/udav_project.git
 //Run From Idea Project
 ZznApplication.Run_LOCAL.main()
 ```
-OR
+OR (+See Commented Docker Way)
 ```bash
 rm -rf udav_project
 #GetRepo
@@ -40,7 +40,10 @@ java -jar zznote/target/app.jar --init
 #mv app.jar
 mv zznote/target/app.jar .
 
-#Run application
-./r.sh --p
+#Run application on our Java Or Skip It and Run in docker
+#./r.sh --p
+
+#mv zznote/Dockerfile-Rocky .
+sudo docker build -t cr-image:1 -f Dockerfile-Rocky . && sudo docker run  cr-image:1
 ```
 
