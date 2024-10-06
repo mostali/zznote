@@ -63,6 +63,9 @@ mv zznote/target/app.jar .
 #mv zznote/Dockerfile-Rocky .
 #sudo docker build -t cr-image:1 -f Dockerfile-Rocky . && sudo docker run  cr-image:1
 ```
+### Аутентификация в приложении
+- пользователь получает токен приложения от тг-бота - страница пользователя **t123.site,com**
+- системная аутентификация как **админа** по ключу в урле?ska=zz ( задается как проперти **ska** в **application.peroperties)**
 
 ### Работа встроенного rest-server
 ```commandline
