@@ -13,5 +13,7 @@
 
 ## RUN
 ```commandline
+git clone git@github.com:mostali/zznote.git
+
 ZznApplication.Run_LOCAL.main()
 ```
