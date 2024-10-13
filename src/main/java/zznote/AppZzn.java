@@ -35,7 +35,7 @@ public class AppZzn {
 	private AppZzn() {
 		final AppZzn previous = INSTANCE.getAndSet(this);
 		if (previous != null) {
-			L.warn("AiApp singleton " + this + " created after " + previous);
+			L.warn("ZznApp singleton " + this + " created after " + previous);
 		}
 	}
 

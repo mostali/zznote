@@ -8,7 +8,7 @@ public class AppZznWeb {
 
 	public static void regZznPages() {
 
-		AppZosWeb.regPageEntity("zklogapp", "zk_os", "zk_pages");
+		AppZosWeb.regPageEntity("zznsi_pages", "zklogapp", "zk_os", "zk_pages");
 
 //		AppZosWeb.regPageEntity(TristoreSP.class, AdminPageSP.class);
 //		AppZosWeb.regPageEntity(PageReadVkSP.class, PageReadBookSP.class);

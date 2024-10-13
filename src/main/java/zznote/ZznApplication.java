@@ -31,6 +31,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import zk_com.base.Xml;
+import zk_notes.control.NotesHeaderProps;
 import zk_os.*;
 import zk_page.ZKC;
 import zk_page.core.FinderPSP;
@@ -193,6 +195,7 @@ public class ZznApplication extends AppBoot implements ApplicationRunner {
 					return new PageSP(ZKC.getFirstWindow(), SpVM.get()) {
 						@Override
 						public void buildPageImpl() {
+//							NotesHeaderProps.openSimple();
 							LogDirView.openSingly("./logs/");
 						}
 					};
