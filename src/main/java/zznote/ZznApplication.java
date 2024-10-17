@@ -41,6 +41,7 @@ import zk_page.core.SpVM;
 import zk_form.control.AuthTbx;
 import zznote_nett.AppZnnTBot;
 import zklogapp.merge.LogDirView;
+import zznotet.routes.GetNoteTRoute;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -171,6 +172,7 @@ public class ZznApplication extends AppBoot implements ApplicationRunner {
 
 			try {
 				String[] xnote_packs = new String[]{//
+						GetNoteTRoute.class.getPackage().getName(),//
 						AppZnnTBot.class.getPackage().getName() + ".routes"//
 				};
 

@@ -9,7 +9,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>zkbea.BeaApplication</param-value>
+		<param-value>zznote.ZznApplication</param-value>
 	</context-param>
 
 	<listener>

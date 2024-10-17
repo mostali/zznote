@@ -82,12 +82,26 @@ http://s.q.com:8080/_api/page/!/note?v=123
 http://s.q.com:8080/_api/page/*/note
 ```
 
-## Команды
+## Команды 
+
+- s/p/i = subdomain/page/item
+
 
 ```commandline
-# s/p/i = subdomain,page,item
 #mv up / note to other server from local (byApi put)
 ~mvu s/p/i zn:s/p/i
 #mv down / note from other server to local (byApi get) 
 ~mvd s/p/i zn:s/p/i
+```
+
+## Команды в чат боте тг
+
+```commandline
+#Добавить заметку
+!s/p/i
+content
+
+#Получить содержимое заметки
+*s/p/i
+
 ```
