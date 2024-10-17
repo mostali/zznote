@@ -1,9 +1,8 @@
-## ZZNote 
+## ZZNote
 
 #### Демо приложение - http://zznote.ru/
 
 Java-Приложение для создания, хранения и отображения информации/заметок и создания простых вэб-страниц
-
 
 Для создания заметок требуется аутентификация
 
@@ -28,8 +27,11 @@ tg.bt.id=botname
 #bottoken
 tg.bt.tk=bottoken
 ```
+
 ### Run Application
-#### Run App from Idea Project 
+
+#### Run App from Idea Project
+
 ```commandline
 #GetRepo + import project in Idea
 git clone git@github.com:mostali/udav_project.git
@@ -38,6 +40,7 @@ git clone git@github.com:mostali/udav_project.git
 //Run From Idea Project
 ZznApplication.Run_LOCAL.main()
 ```
+
 #### Run App as java instance (+Docker Way)
 
 ```bash
@@ -63,14 +66,28 @@ mv zznote/target/app.jar .
 #mv zznote/Dockerfile-Rocky .
 #sudo docker build -t cr-image:1 -f Dockerfile-Rocky . && sudo docker run  cr-image:1
 ```
+
 ### Аутентификация в приложении
+
 - пользователь получает токен приложения от тг-бота. Пользователь получает свой домен типа **t123.site.com**
-- системная аутентификация как **админа** по ключу в урле?ska=zz ( задается как проперти **ska** в **application.peroperties)**
+- системная аутентификация как **админа** по ключу в урле?ska=zz ( задается как проперти **ska** в *
+  *application.peroperties)**
 
 ### Работа встроенного rest-server
+
 ```commandline
-#create note (GET,POST)
-http://q.com:8080/page/!/note?v=123
-#GET note data
-http://q.com:8080/page/*/note
+#put note (GET,POST)
+http://s.q.com:8080/_api/page/!/note?v=123
+#get note data (GET)
+http://s.q.com:8080/_api/page/*/note
+```
+
+## Команды
+
+```commandline
+# s/p/i = subdomain,page,item
+#mv up / note to other server from local (byApi put)
+~mvu s/p/i zn:s/p/i
+#mv down / note from other server to local (byApi get) 
+~mvd s/p/i zn:s/p/i
 ```

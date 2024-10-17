@@ -72,7 +72,7 @@ public class AuthXnTRoute extends TgRoute {
 	private String doAuth(String additionalyMsgData) {
 		Long fromId = getChatIdAny();
 		String msg = AuthSrv.produceTokenAndBuildFreshMsgWithLinkToken(NT.TG, additionalyMsgData, fromId);
-		sendMsg(msg);
+		sendMsgHtml(msg);
 		return null;
 	}
 }
