@@ -61,7 +61,7 @@ java -jar zznote/target/app.jar --init
 #mv app.jar
 mv zznote/target/app.jar .
 
-#Run application on our Java Or Skip It and Run in docker
+#Run application Or Skip It & Run in docker
 ./r.sh --p
 
 #mv zznote/Dockerfile-Rocky .
@@ -97,7 +97,7 @@ http://s.q.com:8080/_api/page/*/note
 
 ## Команды в чат боте тг
 
-### Добавление, получение 
+### Добавление, получение данных заметки
 ```commandline
 #Добавить заметку
 !s/p/i
@@ -105,19 +105,34 @@ content
 
 #Получить содержимое заметки
 *s/p/i
+<--content
 
 ```
 
-### Http CLient
+### Http Client Via Telegram Message
+
 ```commandline
+#Выполнить  GET запрос
+??GET http://url.com
+```
+```
+#Делаем POST запрос
+??POST http://url.com
+--#Header
+--Auth:...
+Body
+```
+
+
+#### Примеры http-запросов
+
+```
 #Обновить содержимое заметки
 ??GET http://q.com:8080/_api/!/note?auth..&v=note
-??GET http://q.com:8080/_api/page/!/note?auth..&v=page-note
 ??POST http://q.com:8080/_api/page/!/note?auth..&v=page-note
 
 #Получить содержимое заметки
 ??GET http://q.com:8080/_api/*/note?auth..
 ??GET http://q.com:8080/_api/page/*/note?auth..
-
 
 ```
