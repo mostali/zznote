@@ -112,12 +112,12 @@ content
 ### Http Client Via Telegram Message
 
 ```commandline
-#Выполнить  GET запрос
+#Выполнить http GET запрос
 ??GET http://url.com
 ```
 ```
 #Делаем POST запрос
-??POST http://url.com
+??Выполнить http POST http://url.com
 --#Header
 --Auth:...
 Body
