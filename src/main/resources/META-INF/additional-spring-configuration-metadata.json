@@ -1,0 +1,64 @@
+{
+  "properties": [
+    {
+      "name": "resources.structure.default.max.depth",
+      "type": "java.lang.String",
+      "description": "A description for 'resources.structure.default.max.depth'"
+    },
+    {
+      "name": "resources.directory",
+      "type": "java.lang.String",
+      "description": "A description for 'resources.directory'"
+    },
+    {
+      "name": "resources.threshold.for.zip",
+      "type": "java.lang.String",
+      "description": "A description for 'resources.threshold.for.zip'"
+    },
+    {
+      "name": "jodconverter.local.enabled",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.enabled'"
+    },
+    {
+      "name": "jodconverter.local.officeHome",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.officeHome'"
+    },
+    {
+      "name": "jodconverter.local.portNumbers",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.portNumbers'"
+    },
+    {
+      "name": "jodconverter.local.kill-existing-process",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.kill-existing-process'"
+    },
+    {
+      "name": "jodconverter.local.process-timeout",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.process-timeout'"
+    },
+    {
+      "name": "jodconverter.local.process-retry-interval",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.process-retry-interval'"
+    },
+    {
+      "name": "jodconverter.local.max-tasks-per-process",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.max-tasks-per-process'"
+    },
+    {
+      "name": "jodconverter.local.task-execution-timeout",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.task-execution-timeout'"
+    },
+    {
+      "name": "jodconverter.local.task-queue-timeout",
+      "type": "java.lang.String",
+      "description": "A description for 'jodconverter.local.task-queue-timeout'"
+    }
+  ]
+}
