@@ -1,0 +1,26 @@
+<language-addon>
+    <addon-name>zkspringboot-demo-addon</addon-name>
+    <version>1.0</version>
+    <language-name>xul/html</language-name>
+
+    <depends>zkmax</depends>
+
+    <stylesheet href="~./_css/core.css" type="text/css"/>
+
+    <!--	<stylesheet href="/css/static-globalstyles.css" type="text/css"/>-->
+    <stylesheet href="~./css/web-globalstyles.css" type="text/css"/>
+
+    <javascript package="zkc_video" merge="false"/>
+
+    <component>
+        <component-name>AdvVideo</component-name>
+        <!--		<component-class>zkc_video.AdvVideo</component-class>-->
+        <component-class>zk_com.ext.video.AdvVideo</component-class>
+        <widget-class>zkc_video.AdvVideo</widget-class>
+        <mold>
+            <mold-name>default</mold-name>
+            <mold-uri>mold/advvideo.js</mold-uri>
+        </mold>
+    </component>
+
+</language-addon>
