@@ -1,0 +1,43 @@
+<zk xmlns:n="native">
+	<style>
+		body{
+		<!--		background-color: #f0f2f5;-->
+		background-image: url(_img/bg_i_sec.png);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 95%;
+		position: relative;
+		}
+		.window {
+<!--		max-width: 960px;-->
+		margin: 0 auto;
+		display: block;
+		background: inherit;
+		}
+
+	</style>
+	<n:form action="/login" method="POST">
+		<grid width="450px" style="margin: 200px auto;">
+			<columns>
+				<column width="160px" />
+				<column width="280px" />
+			</columns>
+			<rows>
+				<row spans="2" align="center">
+					<label value="LOGIN"/>
+				</row>
+				<row>
+					<label value="User :"/>
+					<textbox name="username" value="user"/></row>
+				<row>
+					<label value="Password :"/>
+					<textbox type="password" name="password" value="password"/> </row>
+				<row spans="2" align="right">
+					<hlayout>
+						<button type="reset" label="Reset" /> <button type="submit" label="Login" />
+					</hlayout>
+				</row>
+			</rows>
+		</grid>
+	</n:form>
+</zk>

@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=zznote.AppZznEnvPostProcessor
+#org.springframework.data.jdbc.repository.config.DialectResolver$JdbcDialectProvider=com.enigmabridge.hibernate.dialect.SQLiteDialect

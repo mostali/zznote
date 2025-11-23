@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>zkspringboot-demo</config-name>
+
+<!--	<library-property>-->
+<!--		<name>org.zkoss.zul.Button.mold</name>-->
+<!--		<value>trendy</value>-->
+<!--	</library-property>-->
+
+	<system-config>
+		<ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+	</system-config>
+
+	<!--enable websocket support in ZK 8.5.1 (ZK-3799)  -->
+<!--	https://tracker.zkoss.org/browse/ZK-5095?page=com.atlassian.streams.streams-jira-plugin%3Aactivity-stream-issue-tab-->
+<!--	<listener>-->
+<!--		<listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>-->
+<!--	</listener>-->
+
+	<richlet>
+		<richlet-name>ExampleRichlet</richlet-name><!-- your preferred name -->
+		<richlet-class>zkbea_rmm.richlet.ExampleRichlet</richlet-class><!-- your class name, of course -->
+	</richlet>
+	<richlet-mapping>
+		<richlet-name>ExampleRichlet</richlet-name>
+		<url-pattern>/richlet/example</url-pattern>
+	</richlet-mapping>
+</zk>
