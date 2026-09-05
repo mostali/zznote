@@ -1,0 +1,43 @@
+.my-box {
+    box-shadow: 10px 10px 20px grey;
+    border: 1px solid lightgray;
+    padding: 15px;
+    display: block;
+    width: max-content;
+}
+
+
+.ehio{
+     -webkit-transition: all 700ms linear;
+    -moz-transition: all 700ms linear;
+    -ms-transition: all 700ms linear;
+    -o-transition: all 700ms linear;
+    transition: all 700ms linear;
+}
+.ehio.noin {
+    -moz-opacity: 0;
+    opacity: 0;
+    -moz-transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+}
+.ehio.nout {
+    -moz-opacity: 0;
+    opacity: 0;
+    -moz-transform: scale(2.1);
+    -webkit-transform: scale(2.1);
+    -o-transform: scale(2.1);
+    -ms-transform: scale(2.1);
+    transform: scale(2.1);
+}
+.ehio.aout {
+    -moz-opacity: 0;
+    opacity: 0;
+    -moz-transform:scale(2.1, 2.1);
+    -webkit-transform:scale(2.1, 2.1);
+    -o-transform:scale(2.1, 2.1);
+    -ms-transform:scale(2.1, 2.1);
+    transform:scale(2.1, 2.1);
+}
